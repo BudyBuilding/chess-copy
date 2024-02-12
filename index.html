@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess.com</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;900&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-sidebar">
+      <div class="top-nav-buttons">
+        <div class="logo">
+          <ion-icon class="nav-icon" name="game-controller-outline"></ion-icon>
+          <span><strong>Chess</strong>.com</span>
+        </div>
+        <div class="nav-hover-buttons">
+          <div class="nav-item">
+            <ion-icon
+              class="nav-icon"
+              name="game-controller-outline"
+            ></ion-icon>
+            <p class="nav-text">Play</p>
+<!---->
+
+            <div class="menu-hovered hidden" id="menu-hovered">
+              <div class="play-menu">
+                <button class="button">
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="game-controller-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Play</p>
+                </button>
+
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="laptop-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Computer</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="medal-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Tournament</p>
+                </button>
+
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="dice-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">4 player & Variants</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="cellular-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Leaderboard</p>
+                </button>
+              </div>
+            </div>
+<!---->
+
+          </div>
+          <div class="nav-item">
+            <ion-icon
+              class="nav-icon"
+              name="extension-puzzle-outline"
+            ></ion-icon>
+            <p class="nav-text">Puzzles</p>
+<!---->
+          <div class="menu-hovered hidden" id="menu-hovered">
+            <div class="puzzle-menu">
+              <button>
+                <ion-icon
+                  class="menu-button-icon"
+                  name="cellular-outline"
+                ></ion-icon>
+                <p class="menu-button-text">Puzzles</p>
+              </button>
+
+              <button>
+                <ion-icon
+                  class="menu-button-icon"
+                  name="extension-puzzle-outline"
+                ></ion-icon>
+                <p class="menu-button-text">Puzzles Rush</p>
+              </button>
+              <button>
+                <ion-icon
+                  class="menu-button-icon"
+                  name="shield-outline"
+                ></ion-icon>
+                <p class="menu-button-text">Puzzle Battle</p>
+              </button>
+
+              <button>
+                <ion-icon
+                  class="menu-button-icon"
+                  name="calendar-outline"
+                ></ion-icon>
+                <p class="menu-button-text">Daily Puzzle</p>
+              </button>
+              <button>
+                <ion-icon
+                  class="menu-button-icon"
+                  name="book-outline"
+                ></ion-icon>
+                <p class="menu-button-text">Custom Puzzle</p>
+              </button>
+            </div>
+                </div>
+            <!---->
+          </div>
+          <div class="nav-item">
+            <ion-icon class="nav-icon" name="book-outline"></ion-icon>
+            <p class="nav-text">Learn</p>
+
+            <!---->
+            <div class="menu-hovered hidden" id="menu-hovered">
+              <div class="puzzle-menu">
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="reader-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Lessons</p>
+                </button>
+  
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="search"
+                  ></ion-icon>
+                  <p class="menu-button-text">Analysis</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="paper-plane-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Chessable courses</p>
+                </button>
+  
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="glasses-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Aimchess Training</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="bulb-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Insights</p>
+                </button>
+                
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="clipboard-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Classroom</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="book-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Openings</p>
+                </button>
+  
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="people-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Endgames</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="analytics-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Practice</p>
+                </button>
+              </div>
+                  </div>
+            <!---->
+          </div>
+          <div class="nav-item">
+            <ion-icon class="nav-icon" name="eye-outline"></ion-icon>
+            <p class="nav-text">Watch</p>
+     <!---->
+     <div class="menu-hovered hidden" id="menu-hovered">
+              
+      <div class="puzzle-menu">
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="tv-outline"
+          ></ion-icon>
+          <p class="menu-button-text">ChessTV</p>
+        </button>
+        <button class="topic">
+          <ion-icon
+          class="menu-button-icon"
+          name="wifi-outline"
+        ></ion-icon>
+          <p class="menu-button-text">Streamers</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="laptop-outline"
+          ></ion-icon>
+          <p class="menu-button-text">Dabrother33</p>
+        </button>
+
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="laptop-outline"
+          ></ion-icon>
+          <p class="menu-button-text">Blitzstream</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="laptop-outline"
+          ></ion-icon>
+          <p class="menu-button-text">KingSlayerSloan</p>
+        </button>
+
+        <button class=" topic">
+          <ion-icon
+            class="menu-button-icon"
+            name="trophy"
+          ></ion-icon>
+          <p class="menu-button-text">Events</p>
+        </b>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="trophy-outline"
+          ></ion-icon>
+          <p class="menu-button-text">PogChamps 5</p>
+        </button>
+        
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="trophy-outline"
+          ></ion-icon>
+          <p class="menu-button-text">FIDE World Cup 2023</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="trophy-outline"
+          ></ion-icon>
+          <p class="menu-button-text">FIDE Womwn's World Cup 2023</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="trophy-outline"
+          ></ion-icon>
+          <p class="menu-button-text">Champions Chess Tour Julius Baer</p>
+        </button>
+
+        <button class="topic">
+          <p class="menu-button-text">Playing Now</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="person-outline"
+          ></ion-icon>
+          <p class="menu-button-text">sergoy</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="person-outline"
+          ></ion-icon>
+          <p class="menu-button-text">ManuDavid2910</p>
+        </button>
+        
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="person-outline"
+          ></ion-icon>
+          <p class="menu-button-text">g3god</p>
+        </button>
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="person-outline"
+          ></ion-icon>
+          <p class="menu-button-text">TranjMinh</p>
+        </button>
+        
+        <button>
+          <ion-icon
+            class="menu-button-icon"
+            name="person-outline"
+          ></ion-icon>
+          <p class="menu-button-text">GMSrinath</p>
+        </button>
+      </div>
+          </div>
+    <!---->
+
+          </div>
+          <div class="nav-item">
+            <ion-icon class="nav-icon" name="newspaper-outline"></ion-icon>
+            <p class="nav-text">News</p>
+            
+              <!---->
+
+            
+              <div class="menu-hovered hidden" id="menu-hovered">
+                <div class="play-menu">
+                  <button>
+                    <ion-icon
+                      class="menu-button-icon"
+                      name="pulse-outline"
+                    ></ion-icon>
+                    <p class="menu-button-text">Chess Today</p>
+                  </button>
+  
+                  <button>
+                    <ion-icon
+                      class="menu-button-icon"
+                      name="newspaper-outline"
+                    ></ion-icon>
+                    <p class="menu-button-text">News</p>
+                  </button>
+                  <button>
+                    <ion-icon
+                      class="menu-button-icon"
+                      name="document-outline"
+                    ></ion-icon>
+                    <p class="menu-button-text">Articles</p>
+                  </button>
+  
+                  <button>
+                    <ion-icon
+                      class="menu-button-icon"
+                      name="caret-up-outline"
+                    ></ion-icon>
+                    <p class="menu-button-text">Top Players</p>
+                  </button>
+                  <button>
+                    <ion-icon
+                      class="menu-button-icon"
+                      name="analytics-outline"
+                    ></ion-icon>
+                    <p class="menu-button-text">Chess Rankings</p>
+                  </button>
+                </div>
+              </div>
+  
+              <!---->
+          </div>
+          <div class="nav-item">
+            <ion-icon class="nav-icon" name="person-add-outline"></ion-icon>
+            <p class="nav-text">Social</p>
+
+            <!---->
+
+            
+            <div class="menu-hovered hidden" id="menu-hovered">
+              <div class="play-menu">
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="flag-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Clubs</p>
+                </button>
+
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="chatbubbles-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Forums</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="earth-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Members</p>
+                </button>
+
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="newspaper-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Blogs</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="person-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Coaches</p>
+                </button>
+              </div>
+            </div>
+
+            <!---->
+          </div>
+          <div class="nav-item">
+            <ion-icon
+              class="nav-icon"
+              name="ellipsis-horizontal-outline"
+            ></ion-icon>
+            <p class="nav-text">More</p>
+
+            <!---->
+            <div class="menu-hovered hidden" id="menu-hovered">
+              
+              <div class="puzzle-menu">
+                <button class="topic">
+                  <p class="menu-button-text">Feauters</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="library-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Library</p>
+                </button>
+  
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="compass-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Explorer</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="person-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Solo Chess</p>
+                </button>
+  
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="scan-circle-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Vision</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="clipboard-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Vote Chess</p>
+                </button>
+                
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="phone-portrait-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Mobile Apps</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="person-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">ChessKid</p>
+                </button>
+                <button class="topic">
+                  <p class="menu-button-text">Resources</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="play-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Videos</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="grid-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Game Database</p>
+                </button>
+                
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="book-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Chess Terms</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="game-controller-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Rules</p>
+                </button>
+                
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="hammer-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Tools</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="bag-handle-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Shop</p>
+                </button>
+                
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="gift-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Gift</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="shirt-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Merch</p>
+                </button>
+                <button>
+                  <ion-icon
+                    class="menu-button-icon"
+                    name="code-outline"
+                  ></ion-icon>
+                  <p class="menu-button-text">Computer Championship</p>
+                </button>
+              </div>
+                  </div>
+            <!---->
+          </div>
+        </div>
+
+
+          <div class="search">
+            <ion-icon class="nav-icon hide" name="search"></ion-icon>
+            <input type="text" name="search" id="search" placeholder="Search"/>
+          </div>
+          <div class="credentials">
+            
+            <button class="sign-up-button credential-nav-button hidden-button">
+              <ion-icon class="nav-icon hide" name="person-add-outline"></ion-icon>
+              <a href="#">Sign Up</a>
+            </button>
+            <button class="log-in-button credential-nav-button hidden-button">
+              <ion-icon class="nav-icon hide" name="exit-outline"></ion-icon>
+              <a href="#">Log in</a>
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="bottom-buttons ">
+          <div class="nav-item collapse">
+            <ion-icon class="nav-icon collapse" name="arrow-back-outline"></ion-icon>
+            <p class="nav-text">Collapse</p>
+          </div>
+          <div class="nav-item">
+            <ion-icon class="nav-icon" name="settings-outline"></ion-icon>
+            <p class="nav-text">Settings</p>
+          </div>
+          <div class="nav-item">
+            <ion-icon class="nav-icon" name="help-circle-outline"></ion-icon>
+            <p class="nav-text">Help</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-box">
+      <main>
+        <div class="content">
+          <div class="play">
+            <div class="image">
+              <img
+                src="img/standardboard.1d6f9426.png"
+                alt="board"
+                class="board-img"
+              />
+            </div>
+            <div class="play-right-side">
+              <p class="play-title">
+                <span>Play Chess</span>
+                <span>Online</span>
+                <span>on the #1 Site!</span>
+              </p>
+              <div class="play-stats">
+                <p><strong>1,866,641</strong>&nbsp; Games Today</p>
+                <p><strong>262,804</strong>&nbsp; Playing Now</p>
+              </div>
+              <div class="play-buttons">
+                <div class="play-button green-button">
+                  <ion-icon
+                    class="play-button-icon"
+                    name="game-controller-outline"
+                  ></ion-icon>
+                  <div class="play-button-text">
+                    <p class="button-title">Play Online</p>
+                    <p class="button-description">
+                      Play with someone at your level
+                    </p>
+                  </div>
+                </div>
+
+                <div class="play-button gray-button margin-top-sm">
+                  <ion-icon
+                    class="play-button-icon"
+                    name="laptop-outline"
+                  ></ion-icon>
+                  <div class="play-button-text">
+                    <p class="button-title">Play Computer</p>
+                    <p class="button-description">
+                      Play vs customizable training bots
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-with-moves">
+            <div class="quote-box">
+              <div class="quotes-text-box">
+                <div class="button-and-title">
+                  <strong class="quote-title">Solve Chess Puzzles</strong>
+
+                  <div class="quote-button">
+                    <p class="quote-button-title green-button">Solve Puzzles</p>
+                  </div>
+                </div>
+                <div class="person">
+                  <img
+                    class="persons-img"
+                    src="img/hikaru.jpg"
+                    alt="Hikaru Nakamura"
+                  />
+                  <div class="quote-text">
+                    <p class="quote">
+                      "Puzzles are the best way to improve pattern recognition,
+                      and no site does it better."
+                    </p>
+                    <p class="name">
+                      <span class="monogram">GM</span> Hikaru Nakamura
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="quotes-image-side">
+                <img
+                  class="move-img"
+                  src="img/hikaru-move.png"
+                  alt="Hikaru's Move"
+                />
+              </div>
+            </div>
+
+            <div class="quote-box margin-top-sm">
+              <div class="quotes-image-side">
+                <img
+                  class="move-img"
+                  src="img/anna-move.png"
+                  alt="Hikaru's Move"
+                />
+              </div>
+              <div class="quotes-text-box">
+                <div class="button-and-title">
+                  <strong class="quote-title">Take Chess Lessons</strong>
+
+                  <div class="quote-button">
+                    <p class="quote-button-title green-button">Start Lessons</p>
+                  </div>
+                </div>
+                <div class="person">
+                  <img
+                    class="persons-img"
+                    src="img/anna.jpg"
+                    alt="Hikaru Nakamura"
+                  />
+                  <div class="quote-text">
+                    <p class="quote">
+                      "Chess.com lessons make it easy to learn to play, then
+                      challenge you to continue growing."
+                    </p>
+                    <p class="name">
+                      <span class="monogram">IM</span> Anna Rudolf
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="news">
+            <div class="news-title">
+              Follow what's happening in Chess Today.
+            </div>
+            <div class="new">
+              <img src="img/new-1.png" alt="first new" class="new-img" />
+              <p class="new-description">
+                Nakamura And Carlsen's Rivalry Returns For 2023 Speed Chess
+                Championship Presented By Coinbase
+              </p>
+              <p class="new-author">Leon_Watson</p>
+            </div>
+
+            <div class="new">
+              <img src="img/new-2.jpg" alt="second new" class="new-img" />
+              <p class="new-description">
+                Carlsen, Arjun, Goryachkina Score In Day Of Big Fights And Black
+                Wins
+              </p>
+              <p class="new-author">VSaravanan</p>
+            </div>
+
+            <div class="new">
+              <img src="img/new-3.png" alt="third new" class="new-img" />
+              <p class="new-description">
+                How To Optimize Your Opening Study With Chessable
+              </p>
+              <p class="new-author">Shrilla</p>
+            </div>
+
+            <div class="new">
+              <img src="img/new-4.png" alt="fourth new" class="new-img" />
+              <p class="new-description">
+                The Nimzo Indian Structure: Every Pawn Structure Explained
+              </p>
+              <p class="new-author">
+                <span class="monogram">GM</span>&nbsp; jhellsten
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chess-today-button">
+          <p class="chess-today-title green-button">Chess Today</p>
+        </div>
+
+        <footer>
+          <div class="first-footer-row">
+            <a href="#" class="footer-link">Help</a>
+            <a href="#" class="footer-link">Chess Terms</a>
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Jobs</a>
+            <a href="#" class="footer-link">Developers</a>
+            <a href="#" class="footer-link">User Agreement</a>
+            <a href="#" class="footer-link">Privacy</a>
+            <a href="#" class="footer-link">Fair Play</a>
+            <a href="#" class="footer-link">Community</a>
+            <a href="#" class="footer-link">Partners</a>
+            <a href="#" class="footer-link">Compliance</a>
+            <a href="#" class="footer-link">Chess.com &copy; 2023</a>
+          </div>
+          <div class="second-footer-row">
+            <ion-icon class="footer-icon white-icon" name="logo-apple"></ion-icon>
+            <ion-icon class="footer-icon green-icon" name="logo-android"></ion-icon>
+            <ion-icon class="footer-icon white-icon" name="logo-tiktok"></ion-icon>
+            <ion-icon class="footer-icon blue-icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="footer-icon red-icon" name="logo-youtube"></ion-icon>
+            <ion-icon class="footer-icon purple-icon" name="logo-twitch"></ion-icon>
+            <ion-icon class="footer-icon lightred-icon" name="logo-instagram"></ion-icon>
+            <ion-icon class="footer-icon lightpurple-icon" name="logo-discord"></ion-icon>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+</html>

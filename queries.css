@@ -1,0 +1,148 @@
+@media (max-width: 1250px) {
+  .navigation-sidebar {
+    background-color: #00000033;
+    height: 100vh;
+    color: #ffffffd9;
+    display: flex;
+    opacity: 10;
+    position: fixed;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-box {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+  }
+
+  .menu-button-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .nav-text,
+  .logo span,
+  .credentials a {
+    display: none;
+  }
+
+  #search::placeholder {
+    color: #ffffff00;
+  }
+
+  #search {
+    display: none;
+  }
+  .search {
+    background: none;
+    border: none;
+  }
+
+  .search {
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  .collapse {
+    display: none;
+  }
+
+  .hide {
+    display: inline;
+    color: #fff;
+    padding: 0;
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  .hidden-button {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media (max-width: 1146px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .navigation-sidebar {
+    flex-direction: row;
+    height: 5rem;
+    width: 100%;
+    padding: 0 2rem;
+    background: none;
+    align-items: center;
+    position: fixed;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav-buttons {
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-box {
+    width: 100%;
+    padding: 0;
+    margin: 5rem 5rem 0 5rem;
+  }
+
+  .logo span {
+    display: inline;
+  }
+
+  .logo {
+  }
+
+  .nav-hover-buttons .nav-item {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .bottom-buttons {
+    display: none;
+  }
+
+  .credentials {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .credentials button {
+    width: 10rem;
+  }
+
+  .credentials a {
+    display: inline;
+  }
+}
